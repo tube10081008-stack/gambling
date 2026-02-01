@@ -10,7 +10,8 @@ export default function GameList() {
     const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
 
     const generateGameLink = (symbol) => {
-        return `https://demogamesfree.pragmaticplay.net/hub-demo/openGame.do?lang=ko&cur=KRW&gameSymbol=${symbol}&websiteUrl=https%3A%2F%2Fclienthub.pragmaticplay.com%2F&lobbyUrl=https%3A%2F%2Fclienthub.pragmaticplay.com%2Fslots%2Fgame-library%2F`;
+        // 'gs2c' logic with jurisdiction=99 enables Feature Buy (User Request)
+        return `https://demogamesfree-asia.pragmaticplay.net/gs2c/openGame.do?gameSymbol=${symbol}&websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&jurisdiction=99&lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fko%2F&lang=KO&cur=KRW`;
     };
 
     const filteredGames = useMemo(() => {
