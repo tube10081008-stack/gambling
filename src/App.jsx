@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
 import Bank from './pages/Bank';
 import GameCenter from './pages/GameCenter';
+import GameList from './pages/GameList';
 import Login from './pages/Login';
 import PrivateRoute from './components/PrivateRoute';
 
@@ -28,6 +29,11 @@ function App() {
             <Route path="/game" element={
               <PrivateRoute>
                 <GameCenter />
+              </PrivateRoute>
+            } />
+            <Route path="/game/list" element={
+              <PrivateRoute>
+                <GameList />
               </PrivateRoute>
             } />
           </Routes>
